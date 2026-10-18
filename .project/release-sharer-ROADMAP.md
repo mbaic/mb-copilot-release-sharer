@@ -1,7 +1,7 @@
 # Roadmap
 
-> **Current phase:** P0, platform check
-> **Next gate:** P0 exit (`docs/PLAN.md` §3.3) → owner review
+> **Current phase:** v0.1 built; waiting for owner's real-app tests
+> **Next gate:** owner tests per `docs/TESTING.md`, then v0.1 release (tag)
 > **Last updated:** 2026-10-18
 
 The spec for every item is in [`docs/PLAN.md`](docs/PLAN.md). This file is the single source of truth for **scope and status**. Update it in the same commit as the work. Status values: `todo` · `doing` · `done` · `cut`.
@@ -22,28 +22,28 @@ _(none yet)_
 
 | ID | Item | Milestone | Status | Notes |
 |---|---|---|---|---|
-| F-18 | Packaging: plugin + marketplace manifests, preview image, manual install | M1 | doing | Manifests, hello-world canvas, placeholder preview in draft PR; real `preview.png` in M9. In-app install (U5) waits for owner results in `docs/TESTING.md`. |
-| F-19 | CI, manifest checks, install smoke test | M1 | doing | `check-manifests`, `ci.yml` (3 OS x Node 22/24), `smoke-install.mjs` written; matrix result and local smoke run pending. |
-| F-04 | Parse release body into a model, plus cleaning | M2 | done | M2: `lib/model.mjs`, tests green |
-| F-05 | Plain text format | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
-| F-06 | Markdown format | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
-| F-07 | Email format and "Open in mail client" | M2/M5 | doing | Formatter logic and subject done in M2; mailto button in M5 |
-| F-08 | Rich HTML format (html + plain clipboard) | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
-| F-09 | Toggles: clean, contributors, link | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
-| F-01 | Repo detection and manual override | M3/M7 | todo | |
-| F-02 | Release list, Load more, drafts hidden, badges | M3/M5 | todo | |
-| F-03 | Filter and search | M5 | todo | |
-| F-10 | Editable preview with regenerate and Undo | M5 | todo | |
-| F-11 | Copy with fallbacks | M5 | todo | |
-| F-14 | Error and empty states | M5 | todo | |
-| F-17 | Light/dark theme and accessibility baseline | M5/M9 | todo | |
-| F-12 | Resizable split, persisted | M6 | todo | |
-| F-13 | Narrow layout and list collapse | M6 | todo | |
-| F-15 | Agent actions: list, get, render, select | M7 | todo | |
-| F-16 | Agent rewrite via `set_draft` (may move to v0.2 at gate) | M8 | todo | |
-| F-20 | Docs and `v0.1.0` release | M9/M10 | todo | |
+| F-18 | Packaging: plugin + marketplace manifests, preview image, manual install | M1 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-19 | CI, manifest checks, install smoke test | M1 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-04 | Parse release body into a model, plus cleaning | M2 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-05 | Plain text format | M2/M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-06 | Markdown format | M2/M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-07 | Email format and "Open in mail client" | M2/M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-08 | Rich HTML format (html + plain clipboard) | M2/M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-09 | Toggles: clean, contributors, link | M2/M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-01 | Repo detection and manual override | M3/M7 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-02 | Release list, Load more, drafts hidden, badges | M3/M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-03 | Filter and search | M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-10 | Editable preview with regenerate and Undo | M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-11 | Copy with fallbacks | M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-14 | Error and empty states | M5 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-17 | Light/dark theme and accessibility baseline | M5/M9 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-12 | Resizable split, persisted | M6 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-13 | Narrow layout and list collapse | M6 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-15 | Agent actions: list, get, render, select | M7 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-16 | Agent rewrite via `set_draft` (may move to v0.2 at gate) | M8 | done* | built; platform behavior unverified (see FINDINGS) |
+| F-20 | Docs and `v0.1.0` release | M9/M10 | doing | docs done; tag/release pending owner |
 
-**v0.1 gate:** see PLAN §17. When the gate is reached, stop for owner review.
+`done*` = built and unit/browser tested; real-app verification pending (`docs/TESTING.md`). Gate suspended by the override below; v0.1.0 tag waits for the owner.
 
 ## v0.2: Planned (scope confirmed at the v0.1 review)
 
