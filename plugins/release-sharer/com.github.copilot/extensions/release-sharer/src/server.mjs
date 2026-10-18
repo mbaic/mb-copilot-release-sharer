@@ -4,7 +4,7 @@ import { randomBytes, timingSafeEqual } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-const UI_FILES = new Set(["styles.css", "app.js", "api.js", "splitter.js", "clipboard.js"]);
+const UI_FILES = new Set(["styles.css", "app.js", "api.js", "splitter.js", "clipboard.js", "logic.js"]);
 const LIB_FILES = new Set(["model.mjs", "markdown.mjs", "formatters.mjs", "layout.mjs"]);
 const TYPES = {
   ".html": "text/html; charset=utf-8",

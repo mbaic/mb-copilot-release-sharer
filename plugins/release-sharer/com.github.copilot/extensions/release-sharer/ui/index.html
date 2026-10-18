@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Release Sharer</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="ui/styles.css">
+<script type="module" src="ui/app.js"></script>
+</head>
+<body>
+<div id="app" class="app" data-view="loading">
+  <header class="topbar">
+    <div class="repo">
+      <button id="repo-btn" class="repo-btn mono" type="button" aria-label="Change repository" title="Change repository">
+        <span id="repo-label">Repository</span>
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm1.414 1.06a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354l-1.086-1.086ZM11.189 6.25 9.75 4.81l-6.286 6.287a.25.25 0 0 0-.064.108l-.558 1.953 1.953-.558a.25.25 0 0 0 .108-.064l6.286-6.286Z"/></svg>
+      </button>
+      <form id="repo-form" class="repo-form" hidden>
+        <label class="sr-only" for="repo-input">Repository, owner/repo</label>
+        <input id="repo-input" class="mono" type="text" autocomplete="off" spellcheck="false" placeholder="owner/repo">
+        <button type="submit" class="btn small">Load</button>
+        <span id="repo-msg" class="err" role="alert"></span>
+      </form>
+    </div>
+    <span id="count" class="muted count"></span>
+    <div class="grow"></div>
+    <div class="seg top-filter" role="group" aria-label="Release type">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="stable" aria-pressed="false">Stable</button>
+      <button type="button" data-filter="pre" aria-pressed="false">Pre-release</button>
+    </div>
+    <button id="refresh" class="icon-btn" type="button" aria-label="Reload releases from GitHub" title="Reload releases from GitHub">
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z"/></svg>
+    </button>
+  </header>
+
+  <main id="split" class="split" data-narrow="false" data-collapsed="false">
+    <aside id="list-pane" class="list-pane" aria-label="Releases">
+      <div class="list-head">
+        <label class="sr-only" for="search">Search releases</label>
+        <input id="search" type="search" placeholder="Search releases" autocomplete="off">
+        <div class="seg narrow-filter" role="group" aria-label="Release type">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="stable" aria-pressed="false">Stable</button>
+          <button type="button" data-filter="pre" aria-pressed="false">Pre-release</button>
+        </div>
+      </div>
+      <div id="list" class="list">
+        <div class="skel-row" aria-hidden="true"></div><div class="skel-row" aria-hidden="true"></div><div class="skel-row" aria-hidden="true"></div>
+        <div class="skel-row" aria-hidden="true"></div><div class="skel-row" aria-hidden="true"></div>
+      </div>
+      <p id="list-empty" class="muted pad" hidden>No releases match this filter.</p>
+      <button id="load-more" class="btn load-more" type="button" hidden>Load more</button>
+    </aside>
+
+    <div class="gutter">
+      <div id="handle" class="handle" role="separator" aria-orientation="vertical" aria-label="Resize release list" aria-valuenow="300" aria-valuemin="220" aria-valuemax="600" tabindex="0"></div>
+      <button id="collapse" class="chev" type="button" aria-expanded="true" aria-label="Collapse release list" data-dir="left">
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M9.78 12.78a.75.75 0 0 1-1.06 0L4.47 8.53a.75.75 0 0 1 0-1.06l4.25-4.25a.749.749 0 0 1 1.06 1.06L6.06 8l3.72 3.72a.75.75 0 0 1 0 1.06Z"/></svg>
+      </button>
+    </div>
+
+    <section id="detail" class="detail" aria-label="Release preview">
+      <div id="skeleton" class="skeleton" aria-hidden="true">
+        <div class="skel-line w40"></div><div class="skel-line w70"></div><div class="skel-block"></div>
+      </div>
+
+      <div id="state-panel" class="state-panel" role="status" hidden></div>
+
+      <div id="content" class="content" hidden>
+        <button id="picker-btn" class="picker-btn" type="button" aria-expanded="false" aria-controls="list-pane">
+          <span class="mono" id="picker-tag"></span>
+          <span class="muted ellipsis" id="picker-name"></span>
+          <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"/></svg>
+        </button>
+
+        <div class="detail-head">
+          <div class="title-row">
+            <h1 id="d-tag" class="d-tag mono"></h1>
+            <span id="d-badges" class="badges"></span>
+            <span id="d-date" class="muted"></span>
+            <div class="grow"></div>
+            <a id="d-link" class="link" target="_blank" rel="noopener noreferrer" hidden>View on GitHub</a>
+          </div>
+          <div id="d-title" class="d-title"></div>
+        </div>
+
+        <div class="tabs seg" id="tabs" role="group" aria-label="Format">
+          <button type="button" data-format="plain" aria-pressed="true">Plain text</button>
+          <button type="button" data-format="markdown" aria-pressed="false">Markdown</button>
+          <button type="button" data-format="email" aria-pressed="false">Email</button>
+          <button type="button" data-format="html" aria-pressed="false">Rich HTML</button>
+        </div>
+
+        <div class="options">
+          <label><input id="opt-clean" type="checkbox" checked> Clean PR refs and @mentions</label>
+          <label><input id="opt-contributors" type="checkbox" checked> Contributors</label>
+          <label><input id="opt-link" type="checkbox" checked> Link</label>
+        </div>
+
+        <div id="notices" class="notices"></div>
+
+        <div id="subject-row" class="subject-row" hidden>
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" autocomplete="off">
+        </div>
+
+        <div class="editor-wrap">
+          <textarea id="editor-text" class="editor mono" aria-label="Message preview, editable" spellcheck="false"></textarea>
+          <div id="editor-rich" class="editor rich" role="textbox" aria-multiline="true" aria-label="Rich text preview, editable" contenteditable="true" spellcheck="false" hidden></div>
+        </div>
+
+        <div class="actions">
+          <div class="rw">
+            <button id="rw-btn" class="btn" type="button" title="Uses your Copilot session (AI credits)" aria-haspopup="dialog" aria-expanded="false" hidden>
+              <span aria-hidden="true">&#10022;</span> <span id="rw-label">Rewrite with agent</span>
+            </button>
+            <button id="rw-cancel" class="linkbtn" type="button" hidden>Cancel</button>
+            <span id="rw-chip" class="chip" hidden>Rewritten by agent <button id="rw-revert" class="linkbtn" type="button">Revert</button></span>
+            <div id="rw-pop" class="pop" role="dialog" aria-label="Rewrite with agent" hidden>
+              <div class="chips" role="group" aria-label="Audience">
+                <button type="button" data-audience="Customers" aria-pressed="true">Customers</button>
+                <button type="button" data-audience="Internal" aria-pressed="false">Internal</button>
+              </div>
+              <p class="muted small">The agent rewrites the release notes as a short summary for this audience. You can still edit the result.</p>
+              <button id="rw-go" class="btn primary small" type="button">Rewrite</button>
+              <p id="rw-err" class="err small" role="alert"></p>
+            </div>
+          </div>
+          <span id="chars" class="muted small"></span>
+          <div class="grow"></div>
+          <span id="copy-status" class="copy-status small" role="status" aria-live="polite"></span>
+          <button id="mail-btn" class="btn" type="button" hidden>Open in mail client</button>
+          <button id="copy-btn" class="btn primary" type="button">Copy</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
