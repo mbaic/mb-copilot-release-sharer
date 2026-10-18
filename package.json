@@ -4,7 +4,8 @@
   "type": "module",
   "engines": { "node": ">=22" },
   "scripts": {
+    "test": "node scripts/run-tests.mjs",
     "check": "node --check spike/release-sharer-spike/extension.mjs && node --check spike/release-sharer-spike/page.mjs",
-    "ci": "npm run check"
+    "ci": "npm run check && npm test"
   }
 }

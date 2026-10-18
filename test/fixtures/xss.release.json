@@ -1,0 +1,10 @@
+{
+  "id": 2,
+  "tag_name": "v9.9.9",
+  "name": "<img src=x onerror=alert(1)>",
+  "draft": false,
+  "prerelease": false,
+  "published_at": "2026-10-01T00:00:00Z",
+  "html_url": "https://github.com/acme/bc-app/releases/tag/v9.9.9",
+  "body": "## <script>alert(1)</script>\n* [click](javascript:alert(1)) and [tab](java\tscript:alert(2)) by @eve in https://github.com/acme/bc-app/pull/1\n* [data](data:text/html;base64,PHNjcmlwdD4=) [rel](//evil.example) [ok](https://example.com/a_b_c?x=1&y=2)\n* <img src=x onerror=alert(1)> \"quoted\" 'single' `<b>code</b>`\n* ![pixel](https://evil.example/p.png)\n\n<script>alert(2)</script>\n\n[bad](JaVaScRiPt:alert(3))"
+}
