@@ -9,6 +9,7 @@
     "test": "node scripts/run-tests.mjs",
     "check": "node scripts/check-manifests.mjs && node --check plugins/release-sharer/com.github.copilot/extensions/release-sharer/extension.mjs && node --check spike/release-sharer-spike/extension.mjs && node --check spike/release-sharer-spike/page.mjs",
     "ci": "npm run check && npm test",
-    "smoke": "node scripts/smoke-install.mjs"
+    "smoke": "node scripts/smoke-install.mjs",
+    "dev": "node scripts/dev-server.mjs"
   }
 }
