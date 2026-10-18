@@ -1,0 +1,10 @@
+{
+  "name": "copilot-release-sharer-repo",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "check": "node --check spike/release-sharer-spike/extension.mjs && node --check spike/release-sharer-spike/page.mjs",
+    "ci": "npm run check"
+  }
+}

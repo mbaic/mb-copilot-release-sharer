@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release Sharer Spike</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Release Sharer spike <small>(throwaway, P-0)</small></h1>
+<p class="mut">Results appear under each test. Section ids match the U-items in docs/FINDINGS.md. <button id="dump">Show all results as JSON</button></p>
+<textarea id="dump-out" rows="8" readonly hidden aria-label="All results as JSON"></textarea>
+
+<section id="u1">
+  <h2>U1, U2, U8: environment probe (from open)</h2>
+  <pre id="probe-out">loading…</pre>
+</section>
+
+<section id="u3-clip">
+  <h2>U3: clipboard</h2>
+  <p>Click each button, then paste into the target apps listed in docs/TESTING.md.</p>
+  <div class="row">
+    <button id="c-text">1. writeText</button>
+    <button id="c-item">2. clipboard.write (html + plain)</button>
+    <button id="c-exec-text">3. execCommand (text)</button>
+    <button id="c-exec-rich">4. execCommand (selected rich)</button>
+  </div>
+  <div id="rich-sample" class="card"><div style="font-family:Calibri,'Segoe UI',Arial,sans-serif;font-size:14px;line-height:1.5;color:#1f2328"><div style="font-size:18px;font-weight:600">v9.9.9 Release Sharer spike</div><div style="color:#59636e">18 Oct 2026</div><div style="font-weight:600;margin-top:12px">Features</div><ul style="margin:4px 0 0 20px;padding:0"><li>First item with a <a href="https://example.com/" style="color:#0969da">link</a></li><li>Second item</li></ul></div></div>
+  <pre id="clip-out"></pre>
+</section>
+
+<section id="u3-mail">
+  <h2>U3: mailto link</h2>
+  <a id="mailto" href="mailto:?subject=Release%20Sharer%20spike&amp;body=Line%20one%0D%0ALine%20two">Open mail client</a>
+  <p class="mut">Click it and note what happens (mail client opens, nothing, or a prompt). No automatic result.</p>
+</section>
+
+<section id="u3-split">
+  <h2>U3: splitter with setPointerCapture</h2>
+  <div id="split"><div id="split-left">left</div><div id="handle" role="separator" aria-orientation="vertical" aria-label="Resize spike list" tabindex="0"></div><div id="split-right">right</div></div>
+  <p class="mut">Drag the handle (mouse, and touch if you can), then use ArrowLeft/ArrowRight with it focused.</p>
+  <pre id="split-out"></pre>
+</section>
+
+<section id="u3-store">
+  <h2>U3: localStorage across reopen</h2>
+  <pre id="store-out"></pre>
+  <p class="mut">Close the canvas, reopen it, and compare "visits".</p>
+</section>
+
+<section id="u4">
+  <h2>U4: CSP and embedding</h2>
+  <div id="inline-style-probe" style="padding:2px 6px;background:rgb(1, 2, 3);color:#fff">inline style attribute probe</div>
+  <pre id="csp-out"></pre>
+</section>
+
+<section id="u6">
+  <h2>U6: agent round trip</h2>
+  <button id="rt">Ask the agent to call set_draft</button>
+  <pre id="rt-out"></pre>
+  <h3>Log shapes (U8)</h3>
+  <button id="lp">Run session.log probe</button>
+  <pre id="lp-out"></pre>
+</section>
+
+<section id="u7">
+  <h2>U7: panel size</h2>
+  <pre id="size-out"></pre>
+</section>
+
+<script type="module" src="page.mjs"></script>
+</body>
+</html>
