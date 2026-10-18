@@ -24,12 +24,12 @@ _(none yet)_
 |---|---|---|---|---|
 | F-18 | Packaging: plugin + marketplace manifests, preview image, manual install | M1 | todo | |
 | F-19 | CI, manifest checks, install smoke test | M1 | todo | |
-| F-04 | Parse release body into a model, plus cleaning | M2 | todo | |
-| F-05 | Plain text format | M2/M5 | todo | |
-| F-06 | Markdown format | M2/M5 | todo | |
-| F-07 | Email format and "Open in mail client" | M2/M5 | todo | |
-| F-08 | Rich HTML format (html + plain clipboard) | M2/M5 | todo | |
-| F-09 | Toggles: clean, contributors, link | M2/M5 | todo | |
+| F-04 | Parse release body into a model, plus cleaning | M2 | done | M2: `lib/model.mjs`, tests green |
+| F-05 | Plain text format | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
+| F-06 | Markdown format | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
+| F-07 | Email format and "Open in mail client" | M2/M5 | doing | Formatter logic and subject done in M2; mailto button in M5 |
+| F-08 | Rich HTML format (html + plain clipboard) | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
+| F-09 | Toggles: clean, contributors, link | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
 | F-01 | Repo detection and manual override | M3/M7 | todo | |
 | F-02 | Release list, Load more, drafts hidden, badges | M3/M5 | todo | |
 | F-03 | Filter and search | M5 | todo | |
