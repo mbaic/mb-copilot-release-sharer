@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "tag_name": "v2.4.1",
+  "name": "Posting preview and dimension fixes",
+  "draft": false,
+  "prerelease": false,
+  "published_at": "2026-10-09T08:00:00Z",
+  "created_at": "2026-10-09T07:30:00Z",
+  "html_url": "https://github.com/acme/bc-app/releases/tag/v2.4.1",
+  "author": {
+    "login": "alice"
+  },
+  "body": "## What's Changed\n### Features\n* Posting preview now respects dimension filters by @alice in https://github.com/acme/bc-app/pull/482\n* Apply payment terms in bulk from the customer card by @bjorn in https://github.com/acme/bc-app/pull/479\n### Fixes\n* Rounding difference in multi-currency VAT posting by @carla in https://github.com/acme/bc-app/pull/488\n* Missing permission set for Sales Quote archive by @alice in https://github.com/acme/bc-app/pull/491\n\n## New Contributors\n* @carla made their first contribution in https://github.com/acme/bc-app/pull/488\n\n**Full Changelog**: https://github.com/acme/bc-app/compare/v2.4.0...v2.4.1"
+}
