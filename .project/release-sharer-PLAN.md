@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Repository** | `<GITHUB_USER>/copilot-release-sharer` (personal account, public, MIT) |
+| **Repository** | `mbaic/mb-copilot-release-sharer` (personal account, public, MIT) |
 | **Description** | Canvas for the GitHub Copilot app: pick a release of the current repo and copy it as plain text, Markdown, email or rich HTML. Installable as a plugin. |
 | **Topics** | `github-copilot`, `copilot-canvas`, `copilot-plugin`, `release-notes`, `github-releases` |
 | **Plugin / canvas / marketplace id** | `release-sharer` (all three) |
-| **Install** | `copilot plugin marketplace add <GITHUB_USER>/copilot-release-sharer` then `copilot plugin install release-sharer@release-sharer` |
-| **Placeholders** | `<GITHUB_USER>`, `<AUTHOR NAME>`. Replace them once, repo-wide, before the first push. |
+| **Install** | `copilot plugin marketplace add mbaic/mb-copilot-release-sharer` then `copilot plugin install release-sharer@release-sharer` |
+| **Placeholders** | Resolved 2026-10-18: GitHub user and author name are `mbaic`; repo is `mbaic/mb-copilot-release-sharer`. |
 
 This file lives in the repo as `docs/PLAN.md`. It is written for an implementing LLM or developer. **Read sections 0–4 before writing any code.**
 
@@ -219,7 +219,7 @@ ui/  index.html styles.css app.js api.js splitter.js clipboard.js
 The repo root is the marketplace. The plugin folder is committed **in its installable ("served") layout**, so there is no materialize or build step. Tests and dev scripts sit outside the plugin, so they are not shipped.
 
 ```
-copilot-release-sharer/
+mb-copilot-release-sharer/
 ├─ .github/
 │  ├─ plugin/marketplace.json
 │  ├─ workflows/ci.yml
@@ -285,9 +285,9 @@ Adjust `engines` after U1.
   "name": "release-sharer",
   "description": "Canvas for the GitHub Copilot app: pick a release of the current repo and copy it as plain text, Markdown, email or rich HTML.",
   "version": "0.1.0",
-  "author": { "name": "<AUTHOR NAME>", "url": "https://github.com/<GITHUB_USER>" },
-  "homepage": "https://github.com/<GITHUB_USER>/copilot-release-sharer",
-  "repository": "https://github.com/<GITHUB_USER>/copilot-release-sharer",
+  "author": { "name": "mbaic", "url": "https://github.com/mbaic" },
+  "homepage": "https://github.com/mbaic/mb-copilot-release-sharer",
+  "repository": "https://github.com/mbaic/mb-copilot-release-sharer",
   "license": "MIT",
   "keywords": ["release-notes", "github-releases", "canvas", "copilot-app", "email"],
   "extensions": { "com.github.copilot": { "logo": "assets/preview.png" } }
@@ -299,7 +299,7 @@ Do not add `agents`, `skills`, `hooks` or other component paths: the 1.0 format 
 ```json
 {
   "name": "release-sharer",
-  "owner": { "name": "<AUTHOR NAME>" },
+  "owner": { "name": "mbaic" },
   "metadata": { "description": "Release Sharer canvas for the GitHub Copilot app", "version": "0.1.0" },
   "plugins": [
     {

@@ -72,6 +72,9 @@ _(none yet)_
 _Append-only. Format: `YYYY-MM-DD: decision, reason (IDs affected)`._
 
 - 2026-10-18: Phased delivery (P0 → v0.1 → v0.2); scope tracked here by ID. (all)
-- 2026-10-18: Repo `copilot-release-sharer` under the owner's personal account; marketplace and plugin id `release-sharer`. (F-18)
+- 2026-10-18: Repo is `mbaic/mb-copilot-release-sharer` (supersedes the earlier name `copilot-release-sharer`); marketplace and plugin id stay `release-sharer`. (F-18)
 - 2026-10-18: Agent rewrite uses a single `set_draft` canvas action instead of a request-id broker. (F-16)
 - 2026-10-18: Contributors line: no `@` when clean is on, `@handles` when clean is off. Drafts hidden in v0.1. (F-09, F-02)
+- 2026-10-18: `<GITHUB_USER>` and `<AUTHOR NAME>` both resolved to `mbaic`. PLAN, manifests and install commands use them. (F-18, F-20)
+- 2026-10-18: Planning files stay in `.project/` for now (not moved to `ROADMAP.md` and `docs/PLAN.md`); read the plan's file paths as the `.project/release-sharer-*.md` files until the owner moves them. (all)
+- 2026-10-18: Exception to current-phase-only: M2 (pure core, F-04 to F-09 logic) may run in parallel with P-0, because it does not depend on U1 to U8. (F-04..F-09)
