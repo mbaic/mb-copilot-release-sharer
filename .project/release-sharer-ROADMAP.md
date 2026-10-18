@@ -16,7 +16,7 @@ _(none yet)_
 
 | ID | Item | Status | Notes |
 |---|---|---|---|
-| P-0 | Platform checks U1–U8 (PLAN §3.3) | todo | |
+| P-0 | Platform checks U1–U8 (PLAN §3.3) | doing | Spike and `docs/TESTING.md` prepared; waiting for owner results in `docs/FINDINGS.md`. U5 stays open until M1. |
 
 ## v0.1: First usable release
 
