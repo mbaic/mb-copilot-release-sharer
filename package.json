@@ -1,0 +1,10 @@
+{
+  "name": "copilot-release-sharer-repo",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "ci": "npm test"
+  }
+}
