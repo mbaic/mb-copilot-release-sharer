@@ -22,8 +22,8 @@ _(none yet)_
 
 | ID | Item | Milestone | Status | Notes |
 |---|---|---|---|---|
-| F-18 | Packaging: plugin + marketplace manifests, preview image, manual install | M1 | todo | |
-| F-19 | CI, manifest checks, install smoke test | M1 | todo | |
+| F-18 | Packaging: plugin + marketplace manifests, preview image, manual install | M1 | doing | Manifests, hello-world canvas, placeholder preview in draft PR; real `preview.png` in M9. In-app install (U5) waits for owner results in `docs/TESTING.md`. |
+| F-19 | CI, manifest checks, install smoke test | M1 | doing | `check-manifests`, `ci.yml` (3 OS x Node 22/24), `smoke-install.mjs` written; matrix result and local smoke run pending. |
 | F-04 | Parse release body into a model, plus cleaning | M2 | done | M2: `lib/model.mjs`, tests green |
 | F-05 | Plain text format | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |
 | F-06 | Markdown format | M2/M5 | doing | Formatter logic done in M2 (`lib/formatters.mjs`); UI in M5 |

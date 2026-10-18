@@ -1,0 +1,13 @@
+{
+  "name": "release-sharer",
+  "owner": { "name": "mbaic" },
+  "metadata": { "description": "Release Sharer canvas for the GitHub Copilot app", "version": "0.1.0" },
+  "plugins": [
+    {
+      "name": "release-sharer",
+      "source": "plugins/release-sharer",
+      "description": "Pick a release of the current repo and copy it as text, Markdown, email or rich HTML.",
+      "version": "0.1.0"
+    }
+  ]
+}

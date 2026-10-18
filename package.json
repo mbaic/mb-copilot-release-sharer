@@ -2,10 +2,13 @@
   "name": "copilot-release-sharer-repo",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "node scripts/run-tests.mjs",
-    "check": "node --check spike/release-sharer-spike/extension.mjs && node --check spike/release-sharer-spike/page.mjs",
-    "ci": "npm run check && npm test"
+    "check": "node scripts/check-manifests.mjs && node --check plugins/release-sharer/com.github.copilot/extensions/release-sharer/extension.mjs && node --check spike/release-sharer-spike/extension.mjs && node --check spike/release-sharer-spike/page.mjs",
+    "ci": "npm run check && npm test",
+    "smoke": "node scripts/smoke-install.mjs"
   }
 }
