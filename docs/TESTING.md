@@ -122,6 +122,39 @@ Delete `~/.copilot/extensions/release-sharer-spike/` (and `csp-mode.txt` with it
 | Round trip fails | Hide Rewrite; F-16 `cut` or moved to v0.2 (owner decides at the gate) |
 | `localStorage` does not survive reopen | No change: prefs are already server-side (§7.4) |
 
+## M1: install check (U5, run on your computer)
+
+Needs the M1 branch pushed to GitHub (the marketplace is read from the repo). Remove the P-0 spike from `~/.copilot/extensions/` first so you only see one canvas. The canvas is a hello-world page: success means the plugin installs, "Release Sharer" is launchable, and the page says "Hello from Release Sharer 0.1.0".
+
+Command forms below are from PLAN §3.1 and the CLI docs; if one is rejected, record the exact error instead of improvising.
+
+### A. Copilot app (Customize > Plugins)
+
+1. Add the marketplace: Customize > Plugins > add marketplace > `mbaic/mb-copilot-release-sharer` (or the full URL `https://github.com/mbaic/mb-copilot-release-sharer`). To test the unmerged branch, use a local clone of the branch instead.
+2. Install `release-sharer`. Note whether the app asks you to approve the extension.
+3. Note whether a restart or new session was needed, and how the canvas becomes launchable (ask the agent "open the Release Sharer canvas", a menu, a button).
+4. Open it. Record what you see.
+
+### B. CLI
+
+1. `copilot plugin marketplace add mbaic/mb-copilot-release-sharer`
+2. `copilot plugin install release-sharer@release-sharer`
+3. `copilot plugin list --json` (does it list `release-sharer`?)
+4. Start a session (`copilot`), run `/clear` or restart if needed, and ask the agent to open the canvas.
+5. Optional, from a clone: `npm run smoke` runs the same steps against the local repo with an isolated `COPILOT_HOME`.
+
+### C. VS Code agent session
+
+Same install if the plugin is shared with VS Code; otherwise record that it is not. Then try to open the canvas from an agent session.
+
+### Results (U5)
+
+| Surface | Installed? | Canvas launchable? | How launched | Restart needed? | Page shows hello text? | Notes / exact errors |
+|---|---|---|---|---|---|---|
+| Copilot app | | | | | | |
+| CLI | | | | | | |
+| VS Code | | | | | | |
+
 ## Later phases
 
 The full manual test script (PLAN §15.3) is recorded here in M9.
