@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "release-sharer",
+  "description": "Canvas for the GitHub Copilot app: pick a release of the current repo and copy it as plain text, Markdown, email or rich HTML.",
+  "version": "0.2.2",
+  "author": { "name": "mbaic", "url": "https://github.com/mbaic" },
+  "homepage": "https://github.com/mbaic/mb-copilot-release-sharer",
+  "repository": "https://github.com/mbaic/mb-copilot-release-sharer",
+  "license": "MIT",
+  "keywords": ["release-notes", "github-releases", "canvas", "copilot-app", "email"],
+  "extensions": { "com.github.copilot": { "logo": "assets/preview.png" } }
+}

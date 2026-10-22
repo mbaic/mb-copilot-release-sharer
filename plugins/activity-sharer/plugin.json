@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "activity-sharer",
+  "description": "Canvas for the GitHub Copilot app: what you shipped, reviewed and left open on GitHub for a period, plus an evidence-checked write-up for standups, 1:1s and client updates.",
+  "version": "0.2.2",
+  "author": { "name": "mbaic", "url": "https://github.com/mbaic" },
+  "homepage": "https://github.com/mbaic/mb-copilot-release-sharer",
+  "repository": "https://github.com/mbaic/mb-copilot-release-sharer",
+  "license": "MIT",
+  "keywords": ["github-activity", "pull-requests", "code-review", "canvas", "copilot-app", "standup"],
+  "extensions": { "com.github.copilot": { "logo": "assets/preview.png" } }
+}

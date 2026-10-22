@@ -1,0 +1,776 @@
+{
+ "data": {
+  "viewer": {
+   "login": "mbaic",
+   "cur": {
+    "restrictedContributionsCount": 9,
+    "pullRequestContributionsByRepository": [
+     {
+      "repository": {
+       "nameWithOwner": "contoso/bc-agents",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 3,
+       "nodes": [
+        {
+         "pullRequest": {
+          "number": 61,
+          "title": "Agent tool retry policy",
+          "url": "https://github.com/contoso/bc-agents/pull/61",
+          "state": "OPEN",
+          "createdAt": "2026-10-20T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 58,
+          "title": "Agent tool timeouts",
+          "url": "https://github.com/contoso/bc-agents/pull/58",
+          "state": "MERGED",
+          "createdAt": "2026-10-15T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 55,
+          "title": "MCP tool schema validation",
+          "url": "https://github.com/contoso/bc-agents/pull/55",
+          "state": "MERGED",
+          "createdAt": "2026-09-30T09:00:00Z"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+       "owner": {
+        "login": "mbaic"
+       }
+      },
+      "contributions": {
+       "totalCount": 5,
+       "nodes": [
+        {
+         "pullRequest": {
+          "number": 41,
+          "title": "Add retry to gh wrapper",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/41",
+          "state": "MERGED",
+          "createdAt": "2026-10-19T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 44,
+          "title": "Canvas: keyboard shortcuts",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/44",
+          "state": "OPEN",
+          "createdAt": "2026-10-17T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 40,
+          "title": "Clipboard fallback for Safari",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/40",
+          "state": "MERGED",
+          "createdAt": "2026-10-13T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 38,
+          "title": "Release list paging",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/38",
+          "state": "MERGED",
+          "createdAt": "2026-10-08T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 36,
+          "title": "Theme tokens for dark mode",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/36",
+          "state": "MERGED",
+          "createdAt": "2026-09-29T09:00:00Z"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "contoso/erp-extensions",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 4,
+       "nodes": [
+        {
+         "pullRequest": {
+          "number": 212,
+          "title": "Fix SSO error message",
+          "url": "https://github.com/contoso/erp-extensions/pull/212",
+          "state": "MERGED",
+          "createdAt": "2026-10-17T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 198,
+          "title": "Posting preview for dimension sets",
+          "url": "https://github.com/contoso/erp-extensions/pull/198",
+          "state": "OPEN",
+          "createdAt": "2026-10-03T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 203,
+          "title": "Rounding in sales totals",
+          "url": "https://github.com/contoso/erp-extensions/pull/203",
+          "state": "MERGED",
+          "createdAt": "2026-10-05T09:00:00Z"
+         }
+        },
+        {
+         "pullRequest": {
+          "number": 199,
+          "title": "Intrastat export fixes",
+          "url": "https://github.com/contoso/erp-extensions/pull/199",
+          "state": "MERGED",
+          "createdAt": "2026-09-20T09:00:00Z"
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "pullRequestReviewContributionsByRepository": [
+     {
+      "repository": {
+       "nameWithOwner": "contoso/erp-extensions",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 4,
+       "nodes": [
+        {
+         "occurredAt": "2026-10-20T14:00:00Z",
+         "pullRequest": {
+          "number": 214,
+          "title": "VAT rate table refresh",
+          "url": "https://github.com/contoso/erp-extensions/pull/214",
+          "state": "OPEN",
+          "author": {
+           "login": "ana-k"
+          }
+         }
+        },
+        {
+         "occurredAt": "2026-10-17T14:00:00Z",
+         "pullRequest": {
+          "number": 211,
+          "title": "Posting preview cache",
+          "url": "https://github.com/contoso/erp-extensions/pull/211",
+          "state": "MERGED",
+          "author": {
+           "login": "lukas-r"
+          }
+         }
+        },
+        {
+         "occurredAt": "2026-10-08T14:00:00Z",
+         "pullRequest": {
+          "number": 203,
+          "title": "Fix rounding in totals",
+          "url": "https://github.com/contoso/erp-extensions/pull/203",
+          "state": "MERGED",
+          "author": {
+           "login": "ana-k"
+          }
+         }
+        },
+        {
+         "occurredAt": "2026-09-28T14:00:00Z",
+         "pullRequest": {
+          "number": 201,
+          "title": "Intrastat labels",
+          "url": "https://github.com/contoso/erp-extensions/pull/201",
+          "state": "MERGED",
+          "author": {
+           "login": "nina-b"
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "contoso/bc-agents",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 2,
+       "nodes": [
+        {
+         "occurredAt": "2026-10-14T14:00:00Z",
+         "pullRequest": {
+          "number": 55,
+          "title": "Add MCP tool schema",
+          "url": "https://github.com/contoso/bc-agents/pull/55",
+          "state": "MERGED",
+          "author": {
+           "login": "mira-s"
+          }
+         }
+        },
+        {
+         "occurredAt": "2026-10-02T14:00:00Z",
+         "pullRequest": {
+          "number": 52,
+          "title": "Job queue retries",
+          "url": "https://github.com/contoso/bc-agents/pull/52",
+          "state": "MERGED",
+          "author": {
+           "login": "tomas-v"
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "contoso/docs",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 2,
+       "nodes": [
+        {
+         "occurredAt": "2026-10-06T14:00:00Z",
+         "pullRequest": {
+          "number": 97,
+          "title": "Docs: agent permissions",
+          "url": "https://github.com/contoso/docs/pull/97",
+          "state": "MERGED",
+          "author": {
+           "login": "lukas-r"
+          }
+         }
+        },
+        {
+         "occurredAt": "2026-09-27T14:00:00Z",
+         "pullRequest": {
+          "number": 99,
+          "title": "Docs: MCP setup",
+          "url": "https://github.com/contoso/docs/pull/99",
+          "state": "OPEN",
+          "author": {
+           "login": "jonas-p"
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+       "owner": {
+        "login": "mbaic"
+       }
+      },
+      "contributions": {
+       "totalCount": 1,
+       "nodes": [
+        {
+         "occurredAt": "2026-09-25T14:00:00Z",
+         "pullRequest": {
+          "number": 37,
+          "title": "Release checklist",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/37",
+          "state": "MERGED",
+          "author": {
+           "login": "nina-b"
+          }
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "issueContributionsByRepository": [
+     {
+      "repository": {
+       "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+       "owner": {
+        "login": "mbaic"
+       }
+      },
+      "contributions": {
+       "totalCount": 1,
+       "nodes": [
+        {
+         "issue": {
+          "number": 39,
+          "title": "Canvas flickers on resize",
+          "url": "https://github.com/mbaic/mb-copilot-release-sharer/issues/39",
+          "state": "OPEN",
+          "createdAt": "2026-10-12T09:00:00Z"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "contoso/erp-extensions",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 1,
+       "nodes": [
+        {
+         "issue": {
+          "number": 209,
+          "title": "SSO error text unclear",
+          "url": "https://github.com/contoso/erp-extensions/issues/209",
+          "state": "CLOSED",
+          "createdAt": "2026-10-10T09:00:00Z"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "repository": {
+       "nameWithOwner": "contoso/bc-agents",
+       "owner": {
+        "login": "contoso"
+       }
+      },
+      "contributions": {
+       "totalCount": 1,
+       "nodes": [
+        {
+         "issue": {
+          "number": 57,
+          "title": "Agent timeout too short",
+          "url": "https://github.com/contoso/bc-agents/issues/57",
+          "state": "CLOSED",
+          "createdAt": "2026-10-01T09:00:00Z"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "prev": {
+    "totalPullRequestContributions": 10,
+    "totalPullRequestReviewContributions": 12,
+    "totalIssueContributions": 3
+   }
+  },
+  "merged": {
+   "issueCount": 11,
+   "nodes": [
+    {
+     "number": 41,
+     "title": "Add retry to gh wrapper",
+     "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/41",
+     "createdAt": "2026-10-19T08:00:00Z",
+     "mergedAt": "2026-10-20T10:00:00Z",
+     "headRefName": "claude/retry-wrapper",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "number": 212,
+     "title": "Fix SSO error message",
+     "url": "https://github.com/contoso/erp-extensions/pull/212",
+     "createdAt": "2026-10-17T09:00:00Z",
+     "mergedAt": "2026-10-18T09:00:00Z",
+     "headRefName": "fix/sso-message",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 58,
+     "title": "Agent tool timeouts",
+     "url": "https://github.com/contoso/bc-agents/pull/58",
+     "createdAt": "2026-10-15T09:00:00Z",
+     "mergedAt": "2026-10-16T15:00:00Z",
+     "headRefName": "claude/tool-timeouts",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/bc-agents",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 40,
+     "title": "Clipboard fallback for Safari",
+     "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/40",
+     "createdAt": "2026-10-13T09:00:00Z",
+     "mergedAt": "2026-10-14T09:00:00Z",
+     "headRefName": "claude/clipboard",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "number": 208,
+     "title": "Posting dimension rework",
+     "url": "https://github.com/contoso/erp-extensions/pull/208",
+     "createdAt": "2026-10-01T09:00:00Z",
+     "mergedAt": "2026-10-13T09:00:00Z",
+     "headRefName": "feat/dimension-rework",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 38,
+     "title": "Release list paging",
+     "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/38",
+     "createdAt": "2026-10-08T09:00:00Z",
+     "mergedAt": "2026-10-09T09:00:00Z",
+     "headRefName": "copilot/paging",
+     "author": {
+      "login": "Copilot"
+     },
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "number": 203,
+     "title": "Rounding in sales totals",
+     "url": "https://github.com/contoso/erp-extensions/pull/203",
+     "createdAt": "2026-10-05T09:00:00Z",
+     "mergedAt": "2026-10-07T09:00:00Z",
+     "headRefName": "fix/rounding",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 55,
+     "title": "MCP tool schema validation",
+     "url": "https://github.com/contoso/bc-agents/pull/55",
+     "createdAt": "2026-09-30T09:00:00Z",
+     "mergedAt": "2026-10-03T09:00:00Z",
+     "headRefName": "feat/mcp-schema",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/bc-agents",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 36,
+     "title": "Theme tokens for dark mode",
+     "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/36",
+     "createdAt": "2026-09-29T09:00:00Z",
+     "mergedAt": "2026-09-30T09:00:00Z",
+     "headRefName": "claude/theme-tokens",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "number": 199,
+     "title": "Intrastat export fixes",
+     "url": "https://github.com/contoso/erp-extensions/pull/199",
+     "createdAt": "2026-09-20T09:00:00Z",
+     "mergedAt": "2026-09-26T09:00:00Z",
+     "headRefName": "fix/intrastat",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 35,
+     "title": "README install steps",
+     "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/35",
+     "createdAt": "2026-09-23T09:00:00Z",
+     "mergedAt": "2026-09-23T15:00:00Z",
+     "headRefName": "docs/install",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    }
+   ]
+  },
+  "prevMerged": {
+   "issueCount": 9,
+   "nodes": [
+    {
+     "createdAt": "2026-09-01T09:00:00Z",
+     "mergedAt": "2026-09-04T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-02T09:00:00Z",
+     "mergedAt": "2026-09-06T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-03T09:00:00Z",
+     "mergedAt": "2026-09-08T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "contoso/bc-agents",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-04T09:00:00Z",
+     "mergedAt": "2026-09-10T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-05T09:00:00Z",
+     "mergedAt": "2026-09-12T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-06T09:00:00Z",
+     "mergedAt": "2026-09-14T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "contoso/bc-agents",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-07T09:00:00Z",
+     "mergedAt": "2026-09-16T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-08T09:00:00Z",
+     "mergedAt": "2026-09-18T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "createdAt": "2026-09-09T09:00:00Z",
+     "mergedAt": "2026-09-20T09:00:00Z",
+     "repository": {
+      "nameWithOwner": "contoso/bc-agents",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    }
+   ]
+  },
+  "open": {
+   "issueCount": 3,
+   "nodes": [
+    {
+     "number": 198,
+     "title": "Posting preview for dimension sets",
+     "url": "https://github.com/contoso/erp-extensions/pull/198",
+     "createdAt": "2026-10-03T09:00:00Z",
+     "isDraft": false,
+     "headRefName": "feat/dimension-preview",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 44,
+     "title": "Canvas: keyboard shortcuts",
+     "url": "https://github.com/mbaic/mb-copilot-release-sharer/pull/44",
+     "createdAt": "2026-10-17T09:00:00Z",
+     "isDraft": true,
+     "headRefName": "feat/shortcuts",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "mbaic/mb-copilot-release-sharer",
+      "owner": {
+       "login": "mbaic"
+      }
+     }
+    },
+    {
+     "number": 61,
+     "title": "Agent tool retry policy",
+     "url": "https://github.com/contoso/bc-agents/pull/61",
+     "createdAt": "2026-10-20T09:00:00Z",
+     "isDraft": false,
+     "headRefName": "claude/retry-policy",
+     "author": {
+      "login": "mbaic"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/bc-agents",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    }
+   ]
+  },
+  "reviewRequests": {
+   "issueCount": 2,
+   "nodes": [
+    {
+     "number": 215,
+     "title": "VAT reporting for EU OSS",
+     "url": "https://github.com/contoso/erp-extensions/pull/215",
+     "createdAt": "2026-10-20T09:00:00Z",
+     "author": {
+      "login": "ana-k"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/erp-extensions",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    },
+    {
+     "number": 99,
+     "title": "Docs: MCP server setup",
+     "url": "https://github.com/contoso/docs/pull/99",
+     "createdAt": "2026-10-22T06:00:00Z",
+     "author": {
+      "login": "jonas-p"
+     },
+     "repository": {
+      "nameWithOwner": "contoso/docs",
+      "owner": {
+       "login": "contoso"
+      }
+     }
+    }
+   ]
+  },
+  "rateLimit": {
+   "cost": 1,
+   "remaining": 4999
+  }
+ }
+}

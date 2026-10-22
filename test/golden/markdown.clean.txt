@@ -1,0 +1,17 @@
+## v2.4.1: Posting preview and dimension fixes
+_Released 9 Oct 2026_
+
+### Features
+- Posting preview now respects dimension filters
+- Apply payment terms in bulk from the customer card
+
+### Fixes
+- Rounding difference in multi-currency VAT posting
+- Missing permission set for Sales Quote archive
+
+Contributors: alice, bjorn, carla
+
+[Full release notes and app for download](https://github.com/acme/bc-app/releases/tag/v2.4.1)
+
+Download a new app/PTE app from the link above, extract and install in sandboxes first, then prod environment:
+[screenshot-placeholder]

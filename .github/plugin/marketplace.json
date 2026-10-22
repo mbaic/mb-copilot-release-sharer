@@ -1,0 +1,24 @@
+{
+  "name": "release-sharer",
+  "owner": {
+    "name": "mbaic"
+  },
+  "metadata": {
+    "description": "Canvases for the GitHub Copilot app: share GitHub releases, and share your GitHub activity",
+    "version": "0.3.0"
+  },
+  "plugins": [
+    {
+      "name": "release-sharer",
+      "source": "plugins/release-sharer",
+      "description": "Pick a release of the current repo and copy it as text, Markdown, email or rich HTML.",
+      "version": "0.2.2"
+    },
+    {
+      "name": "activity-sharer",
+      "source": "plugins/activity-sharer",
+      "description": "What you shipped, reviewed and left open on GitHub for a period, plus an evidence-checked write-up.",
+      "version": "0.2.2"
+    }
+  ]
+}

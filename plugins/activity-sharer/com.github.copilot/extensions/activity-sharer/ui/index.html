@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Activity Sharer</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="ui/styles.css">
+<script type="module" src="ui/app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>Activity Sharer</h1><div class="sub" id="sub">Loading your GitHub activity…</div></div>
+    <div class="ctl">
+      <label class="sr-only" for="range">Range</label>
+      <select id="range"></select>
+      <details id="org-menu" class="orgmenu">
+        <summary id="org-summary" aria-label="Organizations to include">All organizations</summary>
+        <div id="org-list" class="orgpop" role="group" aria-label="Organizations to include"></div>
+      </details>
+      <button type="button" id="refresh" aria-label="Refresh data">Refresh</button>
+    </div>
+  </header>
+
+  <div id="loading" class="state" role="status">Loading…</div>
+  <div id="error" class="state" role="alert" hidden></div>
+
+  <div id="main" hidden>
+    <div id="banners"></div>
+    <div class="summary">
+      <h2 id="headline"></h2>
+      <p id="support"></p>
+    </div>
+
+    <div class="tiles" role="group" aria-label="Counts. Select one to list its items." id="tiles"></div>
+    <div class="card detail" id="detail"><h3 id="dt"></h3><ul class="list" id="dl"></ul><p class="note" id="dn"></p></div>
+
+    <div class="card"><h3>Insights</h3><ul class="facts" id="facts"></ul></div>
+
+    <div class="card write" id="write"><h3>Write it up <span class="note">The agent drafts from this data only. Every claim is checked against your items before you copy it.</span></h3>
+      <div class="btns" role="group" aria-label="Audience" id="aud"></div>
+      <div class="draft empty" id="draft" aria-live="polite">Pick an audience. The draft appears here, and the agent session shows the request.</div>
+      <div class="check" id="check" hidden></div>
+      <div class="row" id="copyrow" hidden>
+        <button type="button" class="primary" id="copy-text">Copy text</button>
+        <button type="button" id="copy-md">Copy Markdown</button>
+        <span class="note" id="copied" role="status" aria-live="polite"></span>
+      </div>
+      <p class="note err" id="write-err" role="alert" hidden></p>
+    </div>
+
+    <div class="loops">
+      <div class="card"><h3>Your open PRs <span class="note" id="open-note"></span></h3><ul class="list" id="open-list"></ul></div>
+      <div class="card"><h3>Waiting on your review <span class="note" id="req-note"></span></h3><ul class="list" id="req-list"></ul></div>
+    </div>
+
+    <div class="card chart"><h3 id="chart-title">Per week</h3>
+      <div class="legend"><span><i class="sw s1"></i>PRs merged</span><span><i class="sw s2"></i>Reviews given</span></div>
+      <svg id="chart" viewBox="0 0 600 170" role="img" aria-label="PRs merged and reviews given over time"></svg>
+    </div>
+
+    <div class="card"><h3>Where you worked</h3>
+      <div class="tw"><table><thead><tr><th>Repository</th><th class="n">Merged</th><th class="n">Reviews</th><th class="n">Issues</th></tr></thead><tbody id="repos"></tbody></table></div>
+    </div>
+
+    <p class="note" id="footer"></p>
+  </div>
+</div>
+</body>
+</html>
