@@ -1,0 +1,9 @@
+{
+  "name": "mb-activity-sharer",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "main": "extension.mjs",
+  "description": "Activity Sharer canvas extension for the GitHub Copilot app",
+  "license": "MIT"
+}

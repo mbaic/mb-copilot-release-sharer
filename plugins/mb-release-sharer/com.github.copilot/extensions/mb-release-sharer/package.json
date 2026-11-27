@@ -1,0 +1,9 @@
+{
+  "name": "mb-release-sharer",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "main": "extension.mjs",
+  "description": "Release Sharer canvas extension for the GitHub Copilot app",
+  "license": "MIT"
+}

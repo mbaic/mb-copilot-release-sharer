@@ -1,0 +1,23 @@
+Subject: [acme/bc-app] v2.4.1 released: Posting preview and dimension fixes
+
+Hi all,
+
+v2.4.1 is now available (released 9 Oct 2026).
+
+Features
+- Posting preview now respects dimension filters by @alice in https://github.com/acme/bc-app/pull/482
+- Apply payment terms in bulk from the customer card by @bjorn in https://github.com/acme/bc-app/pull/479
+
+Fixes
+- Rounding difference in multi-currency VAT posting by @carla in https://github.com/acme/bc-app/pull/488
+- Missing permission set for Sales Quote archive by @alice in https://github.com/acme/bc-app/pull/491
+
+New Contributors
+- @carla made their first contribution in https://github.com/acme/bc-app/pull/488
+
+Contributors: @alice, @bjorn, @carla
+
+Full release notes and app for download: https://github.com/acme/bc-app/releases/tag/v2.4.1
+
+Download a new app/PTE app from the link above, extract and install in sandboxes first, then prod environment:
+[screenshot-placeholder]
