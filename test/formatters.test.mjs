@@ -71,7 +71,7 @@ test("rewrite replaces all sections with one plain-text paragraph; header and ta
 test("rewrite is plain text: markup is not interpreted and HTML is escaped", () => {
   const rewrite = "Use **this** <b>now</b> [x](javascript:alert(1)) <script>alert(1)</script>";
   const html = run(model, { format: "html", rewrite }).html;
-  assert.doesNotMatch(html, /<script|<b>|<strong>|<a href="javascript/);
+  assert.doesNotMatch(html, /<script|<b>|<strong>|<a href="javascript/i);
   assert.match(html, /\*\*this\*\* &lt;b&gt;now&lt;\/b&gt;/);
   assert.equal(run(model, { format: "plain", rewrite }).body.includes("**this**"), true);
   assert.equal(run(model, { format: "plain", rewrite: "   " }).body, run(model, { format: "plain" }).body); // blank rewrite is ignored
