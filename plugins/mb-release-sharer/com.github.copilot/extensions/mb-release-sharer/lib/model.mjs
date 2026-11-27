@@ -62,7 +62,13 @@ export function parseBody(body) {
     if (cut > 0) src = src.slice(0, cut);
     truncated = true;
   }
-  src = src.replace(/\r\n?/g, "\n").replace(/<!--[\s\S]*?-->/g, "").replace(/<!--[\s\S]*$/, "");
+  src = src.replace(/\r\n?/g, "\n");
+  let prev;
+  do {
+    prev = src;
+    src = src.replace(/<!--[\s\S]*?-->/g, "");
+  } while (src !== prev);
+  src = src.replace(/<!--[\s\S]*$/, "");
   const lines = src.split("\n").map((l) => l.replace(/\s+$/, ""));
 
   const sections = [];
