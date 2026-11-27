@@ -47,10 +47,11 @@ const state = {
   repos: {},
 };
 const blockedKeys = new Set(["__proto__", "constructor", "prototype"]);
+const isObjectRecord = (x) => x && typeof x === "object" && !Array.isArray(x);
 const merge = (t, p) => {
   for (const [k, v] of Object.entries(p)) {
     if (blockedKeys.has(k)) continue;
-    if (v && typeof v === "object" && !Array.isArray(v)) merge((t[k] ??= Object.create(null)), v);
+    if (isObjectRecord(v) && Object.hasOwn(t, k) && isObjectRecord(t[k])) merge(t[k], v);
     else t[k] = v;
   }
 };
