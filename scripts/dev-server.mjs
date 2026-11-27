@@ -46,7 +46,14 @@ const state = {
   ui: { listWidth: 300, listCollapsed: false, format: "plain", clean: true, contributors: true, link: true, prs: true, audience: "Customers" },
   repos: {},
 };
-const merge = (t, p) => { for (const [k, v] of Object.entries(p)) { if (v && typeof v === "object" && !Array.isArray(v)) merge((t[k] ??= {}), v); else t[k] = v; } };
+const blockedKeys = new Set(["__proto__", "constructor", "prototype"]);
+const merge = (t, p) => {
+  for (const [k, v] of Object.entries(p)) {
+    if (blockedKeys.has(k)) continue;
+    if (v && typeof v === "object" && !Array.isArray(v)) merge((t[k] ??= Object.create(null)), v);
+    else t[k] = v;
+  }
+};
 
 let repo = "acme/bc-app";
 let repoError;
